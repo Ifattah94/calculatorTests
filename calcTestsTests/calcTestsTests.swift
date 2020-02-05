@@ -11,23 +11,23 @@ import XCTest
 
 class calcTestsTests: XCTestCase {
 
-    
+    private var calculator: Calculator!
     
     override func setUp() {
         super.setUp()
-        
+        self.calculator = Calculator()
         
     }
     
+    
+    
     func test_AddTwoNumbers() {
-        let calculator = Calculator()
         let result = calculator.add(2, 3)
         
         XCTAssertEqual(result, 5)
     }
     
     func test_SubtractTwoNumbers() {
-        let calculator = Calculator()
         let result = calculator.subtract(5, 3)
         
         XCTAssertEqual(result, 2)
